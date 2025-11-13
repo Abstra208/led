@@ -1,0 +1,241 @@
+@font-face {
+    font-family: 'BurbankBigCondensed-Bold';
+    src: url('font/BurbankBigCondensed-Bold.eot?#iefix') format('embedded-opentype'), url('font/BurbankBigCondensed-Bold.otf') format('opentype'), url('font/BurbankBigCondensed-Bold.woff') format('woff'), url('font/BurbankBigCondensed-Bold.ttf') format('truetype'), url('font/BurbankBigCondensed-Bold.svg#BurbankBigCondensed-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    height: 100%;
+}
+body {
+    font-family: 'BurbankBigCondensed-Bold';
+    background-color: #cacaca;
+    width: 100%;
+    height: 100%;
+}
+header {
+    padding: 50px 0 50px 50px;
+    letter-spacing: 5px;
+}
+h1 {
+    margin: 0px;
+    font-size: 150px;
+    line-height: 100%;
+}
+#whiteSquare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 250px;
+    z-index: -5;
+    background-color: white;
+}
+#whiteTriangle {
+    position: absolute;
+    top: 0;
+    left: 700px;
+    z-index: -5;
+	border-right: 300px solid transparent;
+	border-top: 250px solid white;
+}
+/*Not specific*/
+.custbtn {
+    padding-top: 5px;
+    letter-spacing: 1px;
+    font-size: 22px;
+    height: 46px;
+}
+input[type=number]:not(.browser-default)::placeholder,input[type=text]:not(.browser-default)::placeholder {
+    color: #bfbfbf;
+}
+input[type=number]:not(.browser-default) {
+    color: black;
+    background-color: #d9d9d9;
+    font-size: 22px;
+    margin-bottom: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+#colors input[type=number]:not(.browser-default) {
+    border-radius: 0;
+}
+
+/*Main*/
+main {
+    padding: 50px 0 0 80px;
+    letter-spacing: 2px;
+}
+/*Login*/
+#login {
+    width: 450px;
+    position: absolute;
+    top: 270px;
+    left: 380px;
+}
+#login span {
+    font-size: 20px;
+    color: black;
+}
+#mdp {
+    width: 196px;
+    color: black;
+    background-color: #d9d9d9;
+    font-size: 18px;
+    margin-bottom: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-left: 4px;
+    height: 36px;
+}
+#logout {
+    margin-left: 10px;
+    top: -5px;
+    font-size: 18px;
+    height: 36px;
+    padding-top: 2px;
+    letter-spacing: 1px;
+}
+#passwordErrors {
+    font-size: 18px;
+    color: red;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+/*div mode*/
+#mode span {
+    font-size: 40px;
+    color: #8c8c8c;
+}
+#mode p {
+    height: 50px;
+}
+/*div manual*/
+#manualConfig {
+    margin-left: 50px;
+}
+/*CustMessage*/
+#messageBox {
+    width: 400px;
+    color: black;
+    background-color: #d9d9d9;
+    font-size: 22px;
+    margin-bottom: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+#update {
+    margin-left: 12px;
+    top: -5px;
+}
+/*Dropdown*/
+#section2 {
+    display: inline-flex;
+    margin-top: 40px;
+}
+#dropdown {
+    font-size: 28px!important;
+    text-transform: none;
+    width: 150px;
+}
+#dropdown:focus {
+    background-color: #26a69a;
+}
+#dropdown1 li>a {
+    font-size: 20px;
+}
+#dropdown1 li>a:hover {
+    background-color: #d9d9d9;
+}
+/*Color Picker*/
+#colorPicker {
+    width: 1000px;
+    margin-left: 100px;
+    z-index: 2;
+    position: absolute;
+    top: 535px;
+    left: 270px;
+    box-shadow: 2px 4px 8px #666666;
+}
+#colorTop {
+    width: 100%;
+    height: 274px;
+    background-color: #b3b3b3;
+    border-radius: 3px;
+    padding: 17px 17px 17px 6px;
+    display: flex;
+}
+#openColorPicker {
+    margin-left: 135px;
+    width: auto;
+}
+#closeColorPicker {
+    height: 0;
+    top: -19px;
+    left: 3px;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+}
+#predefinedColor {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-right: 1px solid black;
+}
+#predefinedColor a {
+    margin-top: 10px;
+}
+#moreSettings {
+    padding-left: 20px;
+    width: 50%;
+}
+#moreSettings span {
+    font-size: 22px;
+    color: black;
+}
+.colorBtns {
+    width: 100px;
+}
+/*RGB picker*/
+#colors {
+    width: 100%;
+    height: 46px;
+    display: inline-flex;
+    font-size: 22px;
+    text-align: center;
+}
+#colors>div {
+    width: calc(100%/3);
+}
+#colors input {
+    text-align: center;
+}
+#colors input:first-child {
+    width: 263px;
+    margin: 23px 0 23px 0;
+}
+#colors input:last-child {
+    width: 70px;
+    float: right;
+}
+/*Display*/
+#display {
+    top: 200px;
+    left: 950px;
+    width: 500px;
+    height: 250px;
+    padding: 0 16px 0 16px;
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    background-color: #546e7a;
+    position: absolute;
+    z-index: 9;
+    cursor: move;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}

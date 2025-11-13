@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Matrice Led</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="MyJs.js"></script>
+        <script src="colors.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Matrice Led</h1>
+            <div id="whiteSquare"></div>
+            <div id="whiteTriangle"></div>
+        </header>
+        <main>
+            <div id="login">
+                <span>Mdp: </span>
+                <input id="mdp" placeholder="Mot de Passe" type="password">
+                <a id="logout" class="waves-effect waves-light btn red" onclick="logout()">Déconnection</a>
+                <p id="passwordErrors"></p>
+            </div>
+            <div id="mode">
+                <p>
+                    <label>
+                        <input id="auto" name="mode" type="radio" onclick="autoMode()">
+                        <span>Automatique</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input id="manual" name="mode" type="radio" onclick="manualMode()">
+                        <span>Personnalisé</span>
+                    </label>
+                </p>
+            </div>
+            <div id="manualConfig">
+                <div id="custMessage">
+                    <input id="messageBox" placeholder="Message" type="text" disabled>
+                    <a id="update" class="waves-effect waves-light btn custbtn disabled" onclick="sendMessage()">Envoyer</a>
+                </div>
+                <div id="section2">
+                    <div>
+                        <a id="dropdown" class='dropdown-trigger btn custbtn disabled' data-target='dropdown1'>Autres</a>
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a onclick="autres()">Autres</a></li>
+                            <li><a onclick="ouvert()">Ouvert</a></li>
+                            <li><a onclick="ferme()">Fermé</a></li>
+                            <li><a onclick="cercle()">Cercle</a></li>
+                        </ul>
+                    </div>
+                    <a id="openColorPicker" class="waves-effect waves-light btn custbtn colorBtns disabled" onclick="openColorPicker()">Couleur/Autres Options</a>
+                    <div id="colorPicker" style="display: none;">
+                        <div id="colorTop">
+                            <div id="closeColorPicker" onclick="closeColorPicker()">x</div>
+                            <div id="predefinedColor">
+                                <a class="waves-effect waves-light btn custbtn colorBtns disabled white black-text" onclick="white()">Blanc</a>
+                                <a class="waves-effect waves-light btn custbtn colorBtns disabled red" onclick="red()">Rouge</a>
+                                <a class="waves-effect waves-light btn custbtn colorBtns disabled green" onclick="green()">Vert</a>
+                                <a class="waves-effect waves-light btn custbtn colorBtns disabled blue darken-3" onclick="blue()">Bleu</a>
+                                <a class="waves-effect waves-light btn custbtn colorBtns disabled yellow black-text" onclick="yellow()">Jaune</a>
+                                <a class="waves-effect waves-light btn custbtn colorBtns disabled orange" onclick="orange()">Orange</a>
+                                <a class="waves-effect waves-light btn custbtn colorBtns disabled purple" onclick="purple()">Violet</a>
+                                <a class="waves-effect waves-light btn custbtn colorBtns disabled cyan" onclick="cyan()">Cyan</a>
+                            </div>
+                            <div id="moreSettings">
+                                <p>
+                                    <label>
+                                        <input id="randomColors" class="toDisable" type="checkbox" />
+                                        <span onclick="randomColors()">Couleurs aléatoires</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input id="textMoving" type="checkbox" checked="checked" />
+                                        <span onclick="textMoving()">Message en mouvement</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="colors">
+                            <div class="red">
+                                <input id="slideRed" oninput="changeRed(this.value)" onmouseup="changeRed(this.value);sDuD()" onchange="changeRed(this.value)" type="range" name="slideRed" min="0" max="255" step="1">
+                                <input id="colorRed" oninput="changeRed(this.value)" onmouseup="changeRed(this.value);sDuD()" onkeyup="changeRed(this.value);sDuD()" type="number" min="0" max="255" disabled>
+                            </div>
+                            <div class="green">
+                                <input id="slideGreen" oninput="changeGreen(this.value)" onmouseup="changeGreen(this.value);sDuD()" onchange="changeGreen(this.value)" type="range" name="slideGreen" min="0" max="255" step="1">
+                                <input id="colorGreen" oninput="changeGreen(this.value)" onmouseup="changeGreen(this.value);sDuD()" onkeyup="changeGreen(this.value);sDuD()" type="number" min="0" max="255" disabled>
+                            </div>
+                            <div class="blue">
+                                <input id="slideBlue" oninput="changeBlue(this.value)" onmouseup="changeBlue(this.value);sDuD()" onchange="changeBlue(this.value)" type="range" name="slideBlue" min="0" max="255" step="1">
+                                <input id="colorBlue" oninput="changeBlue(this.value)" onmouseup="changeBlue(this.value);sDuD()" onkeyup="changeBlue(this.value);sDuD()" type="number" min="0" max="255" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="display">
+            <p>Message</p>
+        </div>
+    </body>
+</html>
