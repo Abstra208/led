@@ -1,0 +1,37 @@
+{
+  "modes": [
+    {
+      "id": "5e6fdf30-1942-41b3-b45b-a8dc9d188131",
+      "mode": "1",
+      "drawing": "0",
+      "message": "test",
+      "colorr": 0,
+      "colorg": 51,
+      "colorb": 255,
+      "rdmColors": "0",
+      "moving": "1"
+    },
+    {
+      "id": "b6d7da59-d535-4a2c-aa24-b7597312408a",
+      "mode": "1",
+      "drawing": "0",
+      "message": "lo",
+      "colorr": 247,
+      "colorg": 170,
+      "colorb": 170,
+      "rdmColors": "0",
+      "moving": "1"
+    },
+    {
+      "id": "37623ba1-632a-4a8a-a812-b8682f5acfa3",
+      "mode": "1",
+      "drawing": "0",
+      "message": "Crealab tous les jours 1, 2, 4, 5, 7 et 8",
+      "colorr": 16,
+      "colorg": 195,
+      "colorb": 201,
+      "rdmColors": "0",
+      "moving": "1"
+    }
+  ]
+}

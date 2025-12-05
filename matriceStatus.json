@@ -1,1 +1,11 @@
-{"mode":1,"drawing":"0","message":"Midi Créalab, jours 2-3-4-5-7 et 8","colorr":0,"colorg":"205","colorb":255,"rdmColors":0,"moving":1}
+{
+  "mode": "1",
+  "drawing": "0",
+  "message": "Crealab tous les jours 1, 2, 4, 5, 7 et 8",
+  "colorr": 16,
+  "colorg": 195,
+  "colorb": 201,
+  "rdmColors": "0",
+  "Moving": "1",
+  "moving": "1"
+}

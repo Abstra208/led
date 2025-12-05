@@ -11,7 +11,7 @@ window.onload = function() {
 
 //Get current data and put it in variables
 function getCurrData() {
-    axios.post("/currData").then(function(response) {
+    axios.get("/currData").then(function(response) {
         data = response.data;
         console.log("get: "+JSON.stringify(data));
         mode = data.mode;
@@ -60,7 +60,10 @@ function sendData() {
         colorb: colorb,
         rdmColors: rdmColors,
         moving: moving,
-        mdp: mdp
+    }, {
+        headers: {
+            'mdp': mdp
+        }
     }).catch(function(error) {console.log("error")});
     mdp = "";
 }
